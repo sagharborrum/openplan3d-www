@@ -1,0 +1,23 @@
+# OpenPlan3D
+
+> Free, open-source 2D & 3D floor plan editor that runs in your browser.
+
+## What it does
+- Draw floor plans in 2D with walls, doors, windows, and dimensions
+- Visualize designs in real-time 3D
+- Place 140+ furniture models from a built-in library
+- Import Apple RoomPlan scans (iPhone/iPad LiDAR)
+- Import 3D mesh models (GLB/glTF)
+- Export to PNG, SVG, DXF, PDF, JSON
+- Imperial and metric unit support
+
+## Key facts
+- Completely free — no premium tier, no paywalls, no signup required
+- Open source: https://github.com/sagharborrum/open3dFloorplan
+- Web app: https://app.openplan3d.com
+- Built with SvelteKit and Three.js
+
+## Links
+- Website: https://www.openplan3d.com
+- Editor: https://app.openplan3d.com
+- GitHub: https://github.com/sagharborrum/open3dFloorplan

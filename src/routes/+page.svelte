@@ -1,19 +1,27 @@
 <svelte:head>
-	<title>OpenPlan3D — Design Your Dream Space in 3D</title>
+	<title>OpenPlan3D — Free Open Source 2D & 3D Floor Plan Editor</title>
+	<meta name="description" content="OpenPlan3D is a free, open-source floor plan editor. Draw 2D floor plans, visualize in 3D, import Apple RoomPlan LiDAR scans, place 140+ furniture models, and export to PNG, SVG, DXF, PDF. No signup, no paywalls." />
+	<meta property="og:title" content="OpenPlan3D — Free Open Source 2D & 3D Floor Plan Editor" />
+	<meta property="og:description" content="Draw floor plans in 2D, visualize in 3D, import RoomPlan scans, and furnish with 140+ models. Completely free and open source." />
+	<meta property="og:url" content="https://www.openplan3d.com/" />
+	<meta name="twitter:title" content="OpenPlan3D — Free Open Source 2D & 3D Floor Plan Editor" />
+	<meta name="twitter:description" content="Draw floor plans in 2D, visualize in 3D, import RoomPlan scans, and furnish with 140+ models. Completely free and open source." />
+	<link rel="canonical" href="https://www.openplan3d.com/" />
 </svelte:head>
 
 <!-- Hero -->
 <section class="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white">
 	<div class="max-w-6xl mx-auto px-6 py-24 md:py-32 text-center">
-		<div class="inline-block bg-blue-500/10 text-blue-400 text-xs font-medium px-3 py-1 rounded-full mb-6 border border-blue-500/20">
-			Free &amp; Open Source
+		<div class="inline-block bg-green-500/10 text-green-400 text-xs font-medium px-3 py-1 rounded-full mb-6 border border-green-500/20">
+			100% Free &amp; Open Source — No Paywalls, No Signup
 		</div>
 		<h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
 			Design Your Dream<br />Space in <span class="text-blue-500">3D</span>
 		</h1>
 		<p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-			Draw floor plans in 2D, visualize in 3D, and furnish with 140+ models. 
-			Export to PNG, SVG, DXF, PDF, and more. No signup required.
+			Draw floor plans in 2D, visualize in 3D, and furnish with 140+ models.
+			Import Apple RoomPlan LiDAR scans or GLB/glTF 3D meshes.
+			Export to PNG, SVG, DXF, PDF, and more. <strong class="text-slate-300">Completely free, forever.</strong>
 		</p>
 		<div class="flex flex-col sm:flex-row gap-4 justify-center">
 			<a
@@ -23,33 +31,65 @@
 				Try Free Editor →
 			</a>
 			<a
-				href="/features"
+				href="https://github.com/sagharborrum/open3dFloorplan"
 				class="border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-medium px-8 py-3.5 rounded-lg text-lg transition-colors"
 			>
-				See Features
+				⭐ View on GitHub
 			</a>
 		</div>
 	</div>
 </section>
 
-<!-- Editor Preview Mockup -->
+<!-- Screenshots -->
 <section class="bg-slate-800 py-16">
-	<div class="max-w-5xl mx-auto px-6">
-		<div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden shadow-2xl">
-			<div class="flex items-center gap-2 px-4 py-3 border-b border-slate-700">
-				<div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-				<div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-				<div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-				<span class="text-slate-500 text-xs ml-2">app.openplan3d.com</span>
-			</div>
-			<div class="aspect-[16/9] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-				<div class="text-center">
-					<div class="text-6xl mb-4">🏠</div>
-					<p class="text-slate-400 text-lg">Interactive 2D &amp; 3D Floor Plan Editor</p>
-					<a href="https://app.openplan3d.com" class="inline-block mt-4 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
-						Open in browser →
-					</a>
+	<div class="max-w-6xl mx-auto px-6">
+		<h2 class="text-2xl md:text-3xl font-bold text-white text-center mb-12">See it in action</h2>
+		<div class="grid md:grid-cols-2 gap-8">
+			<div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden shadow-2xl">
+				<div class="flex items-center gap-2 px-4 py-3 border-b border-slate-700">
+					<div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+					<div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+					<div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+					<span class="text-slate-500 text-xs ml-2">2D Floor Plan</span>
 				</div>
+				<img src="/screenshots/2d-floorplan.png" alt="OpenPlan3D 2D floor plan view showing room layout with furniture placement and imperial dimensions" class="w-full" />
+			</div>
+			<div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden shadow-2xl">
+				<div class="flex items-center gap-2 px-4 py-3 border-b border-slate-700">
+					<div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+					<div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+					<div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+					<span class="text-slate-500 text-xs ml-2">3D View</span>
+				</div>
+				<img src="/screenshots/3d-view.png" alt="OpenPlan3D 3D rendered view of a furnished floor plan with realistic textures and lighting" class="w-full" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Why Free -->
+<section class="bg-slate-900 py-16">
+	<div class="max-w-4xl mx-auto px-6">
+		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+			<div class="p-6 rounded-xl bg-slate-800 border border-slate-700">
+				<div class="text-3xl mb-3">💸</div>
+				<h3 class="text-white font-semibold mb-1">100% Free</h3>
+				<p class="text-slate-400 text-sm">No premium tier. No paywalls. No hidden costs. Free forever.</p>
+			</div>
+			<div class="p-6 rounded-xl bg-slate-800 border border-slate-700">
+				<div class="text-3xl mb-3">🔓</div>
+				<h3 class="text-white font-semibold mb-1">Open Source</h3>
+				<p class="text-slate-400 text-sm">Fully open source on <a href="https://github.com/sagharborrum/open3dFloorplan" class="text-blue-400 hover:text-blue-300">GitHub</a>. Inspect, modify, contribute.</p>
+			</div>
+			<div class="p-6 rounded-xl bg-slate-800 border border-slate-700">
+				<div class="text-3xl mb-3">📱</div>
+				<h3 class="text-white font-semibold mb-1">RoomPlan Import</h3>
+				<p class="text-slate-400 text-sm">Scan rooms with iPhone/iPad LiDAR. Import directly into the editor.</p>
+			</div>
+			<div class="p-6 rounded-xl bg-slate-800 border border-slate-700">
+				<div class="text-3xl mb-3">🧊</div>
+				<h3 class="text-white font-semibold mb-1">3D Mesh Import</h3>
+				<p class="text-slate-400 text-sm">Import GLB/glTF 3D models. Bring your own furniture and objects.</p>
 			</div>
 		</div>
 	</div>
@@ -58,18 +98,18 @@
 <!-- Features Grid -->
 <section class="bg-white py-20">
 	<div class="max-w-6xl mx-auto px-6">
-		<div class="text-center mb-16">
+		<header class="text-center mb-16">
 			<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Everything you need to plan your space</h2>
-			<p class="text-slate-500 text-lg max-w-2xl mx-auto">Professional-grade tools, completely free. From quick sketches to detailed floor plans.</p>
-		</div>
+			<p class="text-slate-500 text-lg max-w-2xl mx-auto">Professional-grade tools, completely free and open source. From quick sketches to detailed floor plans.</p>
+		</header>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each features as feature}
-				<div class="group p-6 rounded-xl border border-slate-200 hover:border-blue-200 hover:shadow-lg transition-all">
+				<article class="group p-6 rounded-xl border border-slate-200 hover:border-blue-200 hover:shadow-lg transition-all">
 					<div class="text-3xl mb-4">{feature.icon}</div>
 					<h3 class="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
 					<p class="text-slate-500 text-sm leading-relaxed">{feature.desc}</p>
-				</div>
+				</article>
 			{/each}
 		</div>
 	</div>
@@ -79,13 +119,21 @@
 <section class="bg-slate-50 py-20">
 	<div class="max-w-3xl mx-auto px-6 text-center">
 		<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Ready to design your space?</h2>
-		<p class="text-slate-500 text-lg mb-8">Start creating beautiful floor plans in minutes. Free, no signup needed.</p>
-		<a
-			href="https://app.openplan3d.com"
-			class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-lg text-lg transition-colors shadow-lg shadow-blue-500/25"
-		>
-			Launch Editor →
-		</a>
+		<p class="text-slate-500 text-lg mb-8">Start creating beautiful floor plans in minutes. Free, open source, no signup needed.</p>
+		<div class="flex flex-col sm:flex-row gap-4 justify-center">
+			<a
+				href="https://app.openplan3d.com"
+				class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-lg text-lg transition-colors shadow-lg shadow-blue-500/25"
+			>
+				Launch Editor →
+			</a>
+			<a
+				href="https://github.com/sagharborrum/open3dFloorplan"
+				class="inline-block border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 font-medium px-8 py-3.5 rounded-lg text-lg transition-colors"
+			>
+				GitHub Repository →
+			</a>
+		</div>
 	</div>
 </section>
 
@@ -94,8 +142,10 @@
 		{ icon: '✏️', title: '2D Floor Plan Drawing', desc: 'Draw walls, rooms, doors, and windows with precise measurements. Snap-to-grid and orthogonal drawing modes.' },
 		{ icon: '🧊', title: '3D Visualization', desc: 'Instantly switch to a 3D view of your floor plan. Walk through your design with orbit controls.' },
 		{ icon: '🪑', title: '140+ Furniture Models', desc: 'Browse and place furniture from a curated library. Resize, rotate, and position items precisely.' },
-		{ icon: '📱', title: 'RoomPlan / LiDAR Import', desc: 'Import room scans from Apple RoomPlan. Turn your real room into an editable floor plan.' },
+		{ icon: '📱', title: 'Apple RoomPlan Import', desc: 'Scan rooms with iPhone or iPad LiDAR and import directly. Turn your real room into an editable floor plan.' },
+		{ icon: '🧊', title: 'GLB/glTF 3D Mesh Import', desc: 'Import your own 3D models in GLB or glTF format. Add custom furniture, fixtures, and objects.' },
 		{ icon: '📐', title: 'Imperial & Metric Units', desc: 'Work in feet/inches or meters/centimeters. Switch anytime — measurements update automatically.' },
 		{ icon: '📤', title: 'Export Anywhere', desc: 'Export to PNG, SVG, DXF, PDF, or JSON. Share your plans or continue editing in CAD software.' },
+		{ icon: '🔓', title: 'Free & Open Source', desc: 'No premium tier, no paywalls, no signup. View the source code on GitHub and contribute.' },
 	];
 </script>
