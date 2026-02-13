@@ -44,10 +44,10 @@
 				The floor plan editor is fully open source and available on GitHub. We welcome contributions, feedback, and feature requests from the community. Inspect the code, fork it, build on it.
 			</p>
 			<a
-				href="https://github.com/theLodgeStudio/open3dFloorplan"
+				href="https://github.com/theLodgeBots/open3dFloorplan"
 				class="inline-flex items-center gap-2 text-blue-500 hover:text-blue-600 font-medium transition-colors"
 			>
-				View on GitHub — theLodgeStudio/open3dFloorplan →
+				View on GitHub — theLodgeBots/open3dFloorplan →
 			</a>
 		</section>
 
@@ -76,7 +76,7 @@
 				Try Free Editor →
 			</a>
 			<a
-				href="https://github.com/theLodgeStudio/open3dFloorplan"
+				href="https://github.com/theLodgeBots/open3dFloorplan"
 				class="inline-block border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 font-medium px-8 py-3.5 rounded-lg text-lg transition-colors"
 			>
 				View Source Code →

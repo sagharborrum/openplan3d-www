@@ -15,7 +15,7 @@
 			100% Free — No Premium Tier, No Paywalls
 		</div>
 		<h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Powerful features,<br /><span class="text-blue-500">zero cost</span></h1>
-		<p class="text-slate-400 text-lg max-w-2xl mx-auto">Everything you need to design, visualize, and share professional floor plans — all in your browser, completely free and <a href="https://github.com/theLodgeStudio/open3dFloorplan" class="text-blue-400 hover:text-blue-300 underline">open source</a>.</p>
+		<p class="text-slate-400 text-lg max-w-2xl mx-auto">Everything you need to design, visualize, and share professional floor plans — all in your browser, completely free and <a href="https://github.com/theLodgeBots/open3dFloorplan" class="text-blue-400 hover:text-blue-300 underline">open source</a>.</p>
 	</div>
 </section>
 
@@ -79,7 +79,7 @@
 				Open Free Editor →
 			</a>
 			<a
-				href="https://github.com/theLodgeStudio/open3dFloorplan"
+				href="https://github.com/theLodgeBots/open3dFloorplan"
 				class="inline-block border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 font-medium px-8 py-3.5 rounded-lg text-lg transition-colors"
 			>
 				View Source on GitHub →

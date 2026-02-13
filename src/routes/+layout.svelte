@@ -77,7 +77,7 @@
 			<div>
 				<h4 class="text-slate-300 font-medium mb-3">Open Source</h4>
 				<ul class="space-y-2">
-					<li><a href="https://github.com/theLodgeStudio/open3dFloorplan" class="hover:text-white transition-colors">GitHub</a></li>
+					<li><a href="https://github.com/theLodgeBots/open3dFloorplan" class="hover:text-white transition-colors">GitHub</a></li>
 				</ul>
 			</div>
 		</div>

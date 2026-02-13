@@ -13,11 +13,11 @@
 
 ## Key facts
 - Completely free — no premium tier, no paywalls, no signup required
-- Open source: https://github.com/theLodgeStudio/open3dFloorplan
+- Open source: https://github.com/theLodgeBots/open3dFloorplan
 - Web app: https://app.openplan3d.com
 - Built with SvelteKit and Three.js
 
 ## Links
 - Website: https://www.openplan3d.com
 - Editor: https://app.openplan3d.com
-- GitHub: https://github.com/theLodgeStudio/open3dFloorplan
+- GitHub: https://github.com/theLodgeBots/open3dFloorplan
