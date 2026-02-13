@@ -1,11 +1,11 @@
 <svelte:head>
-	<title>About — OpenPlan3D | Free Open Source Floor Plan Editor</title>
-	<meta name="description" content="Learn about OpenPlan3D, a free, open-source 2D & 3D floor plan editor built by theLodgeStudio. No paywalls, no signup — just powerful design tools for everyone." />
-	<meta property="og:title" content="About — OpenPlan3D" />
-	<meta property="og:description" content="OpenPlan3D is a free, open-source floor plan editor built by theLodgeStudio. No paywalls, no signup." />
+	<title>About OpenPlan3D | Free Open Source Home Design Tool</title>
+	<meta name="description" content="OpenPlan3D is a free, open source floor plan editor built by theLodgeStudio. Design homes in 2D and 3D with LiDAR room scanning support. No account required, no paywalls." />
+	<meta property="og:title" content="About OpenPlan3D | Free Open Source Home Design Tool" />
+	<meta property="og:description" content="OpenPlan3D is a free, open source floor plan editor built by theLodgeStudio. Design homes in 2D and 3D with LiDAR room scanning support. No account required, no paywalls." />
 	<meta property="og:url" content="https://www.openplan3d.com/about" />
-	<meta name="twitter:title" content="About — OpenPlan3D" />
-	<meta name="twitter:description" content="Free, open-source floor plan editor built by theLodgeStudio." />
+	<meta name="twitter:title" content="About OpenPlan3D | Free Open Source Home Design Tool" />
+	<meta name="twitter:description" content="OpenPlan3D is a free, open source floor plan editor built by theLodgeStudio. Design homes in 2D and 3D with LiDAR room scanning support. No account required, no paywalls." />
 	<link rel="canonical" href="https://www.openplan3d.com/about" />
 </svelte:head>
 

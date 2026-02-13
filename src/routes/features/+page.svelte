@@ -1,11 +1,11 @@
 <svelte:head>
-	<title>Features — OpenPlan3D | Free Open Source Floor Plan Editor</title>
-	<meta name="description" content="Explore OpenPlan3D's features: 2D/3D floor plan editing, 140+ furniture models, Apple RoomPlan LiDAR import, GLB/glTF 3D mesh import, multi-format export. 100% free and open source." />
-	<meta property="og:title" content="Features — OpenPlan3D | Free Open Source Floor Plan Editor" />
-	<meta property="og:description" content="2D/3D floor plan editing, 140+ furniture models, Apple RoomPlan import, GLB/glTF support. Completely free and open source." />
+	<title>Features | Free 2D/3D Floor Plan Software - OpenPlan3D</title>
+	<meta name="description" content="Explore OpenPlan3D features: draw walls, place doors & windows, furnish rooms with 140+ 3D models, import Apple RoomPlan scans, switch between 2D & 3D views, export to multiple formats. 100% free." />
+	<meta property="og:title" content="Features | Free 2D/3D Floor Plan Software - OpenPlan3D" />
+	<meta property="og:description" content="Explore OpenPlan3D features: draw walls, place doors & windows, furnish rooms with 140+ 3D models, import Apple RoomPlan scans, switch between 2D & 3D views, export to multiple formats. 100% free." />
 	<meta property="og:url" content="https://www.openplan3d.com/features" />
-	<meta name="twitter:title" content="Features — OpenPlan3D" />
-	<meta name="twitter:description" content="2D/3D floor plan editing, RoomPlan import, GLB/glTF support. Free and open source." />
+	<meta name="twitter:title" content="Features | Free 2D/3D Floor Plan Software - OpenPlan3D" />
+	<meta name="twitter:description" content="Explore OpenPlan3D features: draw walls, place doors & windows, furnish rooms with 140+ 3D models, import Apple RoomPlan scans, switch between 2D & 3D views, export to multiple formats. 100% free." />
 	<link rel="canonical" href="https://www.openplan3d.com/features" />
 </svelte:head>
 

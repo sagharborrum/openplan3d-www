@@ -1,11 +1,11 @@
 <svelte:head>
-	<title>OpenPlan3D — Free Open Source 2D & 3D Floor Plan Editor</title>
-	<meta name="description" content="OpenPlan3D is a free, open-source floor plan editor. Draw 2D floor plans, visualize in 3D, import Apple RoomPlan LiDAR scans, place 140+ furniture models, and export to PNG, SVG, DXF, PDF. No signup, no paywalls." />
-	<meta property="og:title" content="OpenPlan3D — Free Open Source 2D & 3D Floor Plan Editor" />
-	<meta property="og:description" content="Draw floor plans in 2D, visualize in 3D, import RoomPlan scans, and furnish with 140+ models. Completely free and open source." />
+	<title>OpenPlan3D: Free Open Source Floor Plan Editor | 2D & 3D Home Design</title>
+	<meta name="description" content="Create professional 2D floor plans and 3D home designs for free. Open source floor plan editor with Apple RoomPlan LiDAR import, 140+ furniture models, and export to PNG, SVG, DXF, PDF." />
+	<meta property="og:title" content="OpenPlan3D: Free Open Source Floor Plan Editor | 2D & 3D Home Design" />
+	<meta property="og:description" content="Create professional 2D floor plans and 3D home designs for free. Open source floor plan editor with Apple RoomPlan LiDAR import, 140+ furniture models, and export to PNG, SVG, DXF, PDF." />
 	<meta property="og:url" content="https://www.openplan3d.com/" />
-	<meta name="twitter:title" content="OpenPlan3D — Free Open Source 2D & 3D Floor Plan Editor" />
-	<meta name="twitter:description" content="Draw floor plans in 2D, visualize in 3D, import RoomPlan scans, and furnish with 140+ models. Completely free and open source." />
+	<meta name="twitter:title" content="OpenPlan3D: Free Open Source Floor Plan Editor | 2D & 3D Home Design" />
+	<meta name="twitter:description" content="Create professional 2D floor plans and 3D home designs for free. Open source floor plan editor with Apple RoomPlan LiDAR import, 140+ furniture models, and export to PNG, SVG, DXF, PDF." />
 	<link rel="canonical" href="https://www.openplan3d.com/" />
 </svelte:head>
 
