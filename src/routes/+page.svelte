@@ -31,7 +31,7 @@
 				Try Free Editor →
 			</a>
 			<a
-				href="https://github.com/sagharborrum/open3dFloorplan"
+				href="https://github.com/theLodgeStudio/open3dFloorplan"
 				class="border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-medium px-8 py-3.5 rounded-lg text-lg transition-colors"
 			>
 				⭐ View on GitHub
@@ -79,7 +79,7 @@
 			<div class="p-6 rounded-xl bg-slate-800 border border-slate-700">
 				<div class="text-3xl mb-3">🔓</div>
 				<h3 class="text-white font-semibold mb-1">Open Source</h3>
-				<p class="text-slate-400 text-sm">Fully open source on <a href="https://github.com/sagharborrum/open3dFloorplan" class="text-blue-400 hover:text-blue-300">GitHub</a>. Inspect, modify, contribute.</p>
+				<p class="text-slate-400 text-sm">Fully open source on <a href="https://github.com/theLodgeStudio/open3dFloorplan" class="text-blue-400 hover:text-blue-300">GitHub</a>. Inspect, modify, contribute.</p>
 			</div>
 			<div class="p-6 rounded-xl bg-slate-800 border border-slate-700">
 				<div class="text-3xl mb-3">📱</div>
@@ -128,7 +128,7 @@
 				Launch Editor →
 			</a>
 			<a
-				href="https://github.com/sagharborrum/open3dFloorplan"
+				href="https://github.com/theLodgeStudio/open3dFloorplan"
 				class="inline-block border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-slate-900 font-medium px-8 py-3.5 rounded-lg text-lg transition-colors"
 			>
 				GitHub Repository →
