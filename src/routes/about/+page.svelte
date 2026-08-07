@@ -1,3 +1,8 @@
+<script>
+	import { trackOutbound } from '$lib/analytics';
+	import { SIBLING_APPS } from '$lib/apps';
+</script>
+
 <svelte:head>
 	<title>About OpenPlan3D | Free Open Source Home Design Tool</title>
 	<meta name="description" content="OpenPlan3D is a free, open source floor plan editor built by theLodgeStudio. Design homes in 2D and 3D with LiDAR room scanning support. No account required, no paywalls." />
@@ -62,6 +67,30 @@
 			<p class="text-slate-600 leading-relaxed">
 				OpenPlan3D is built with modern web technologies — SvelteKit, Three.js, and a lot of care for the details that matter.
 			</p>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-bold text-slate-900 mb-4">Our Other Open Apps</h2>
+			<p class="text-slate-600 leading-relaxed mb-6">
+				OpenPlan3D is part of a family of free, open-source tools we build on the same principles — no subscription, no account, source on GitHub.
+			</p>
+			<div class="space-y-4">
+				{#each SIBLING_APPS as app}
+					<a
+						href={app.url}
+						target="_blank"
+						rel="noopener"
+						onclick={() => trackOutbound(`about_${app.slug}`, app.url)}
+						class="block border border-slate-200 hover:border-blue-400 rounded-lg p-5 transition-colors"
+					>
+						<div class="flex items-baseline gap-3 mb-1">
+							<span class="font-semibold text-slate-900">{app.name}</span>
+							<span class="text-xs uppercase tracking-wide text-slate-400">{app.platform}</span>
+						</div>
+						<p class="text-slate-600 text-sm leading-relaxed">{app.blurb}</p>
+					</a>
+				{/each}
+			</div>
 		</section>
 	</div>
 </main>

@@ -28,10 +28,11 @@
 - No account required; scans stay on the device. Status: coming soon to the App Store.
 - Details: https://openplan3d.com/capture
 
-## Related tool: 3D Splat App
-- 3D Splat App turns photos and videos into photorealistic 3D scenes with Gaussian Splatting on your Mac — no LiDAR required.
-- From the makers of OpenPlan3D. Useful for capturing a real space before designing its floor plan.
-- Details: https://3dsplatapp.com/
+## Other free, open-source apps from the same makers (theLodgeStudio)
+- 3D Splat App turns photos and videos into photorealistic 3D scenes with Gaussian Splatting on your Mac — no LiDAR required. Useful for capturing a real space before designing its floor plan. https://3dsplatapp.com/
+- Open Survey 3D is a free, open-source land surveying app for iPhone and iPad that collects points, boundaries, and areas using built-in GPS or a connected RTK receiver. https://opensurvey3d.com/
+- OpenShape3D is a free, open-source direct-modeling CAD app for iPad and iPhone — sketch, extrude, and fillet exact 3D solids, built on the OpenCASCADE geometry kernel. https://openshape3d.com/
+- OpenWater is a free, open-source GPS speed and technique tracker for wingfoiling, downwinding, windsurfing, kitesurfing, and sailing, on iPhone and Apple Watch. No account; data stays on the device. https://openwaterapp.com/
 
 ## Links
 - Website: https://openplan3d.com
@@ -39,3 +40,6 @@
 - iPhone app: https://openplan3d.com/capture
 - GitHub: https://github.com/theLodgeBots/open3dFloorplan
 - 3D Splat App (Gaussian Splatting on Mac): https://3dsplatapp.com/
+- Open Survey 3D (land surveying on iPhone/iPad): https://opensurvey3d.com/
+- OpenShape3D (direct-modeling CAD on iPad/iPhone): https://openshape3d.com/
+- OpenWater (GPS watersports tracker for iPhone/Apple Watch): https://openwaterapp.com/

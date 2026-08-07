@@ -1,7 +1,11 @@
 <script>
 	import { trackOutbound } from '$lib/analytics';
 	import { LAST_REVIEWED, otherAlternatives } from '$lib/competitors';
+	import { SIBLING_APPS } from '$lib/apps';
 	import ComparisonTable from '$lib/ComparisonTable.svelte';
+
+	// 3D Splat App has its own cross-promo section above, so the grid covers the rest.
+	const OTHER_APPS = SIBLING_APPS.filter((a) => a.slug !== '3dsplatapp');
 
 	const GITHUB = 'https://github.com/theLodgeBots/open3dFloorplan';
 	const EDITOR = 'https://app.openplan3d.com';
@@ -57,6 +61,42 @@
 				offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 				description: 'Turn photos and videos into photorealistic 3D scenes with Gaussian Splatting on your Mac. No LiDAR required.',
 				sameAs: ['https://3dsplatapp.com/']
+			},
+			{
+				'@type': 'MobileApplication',
+				name: 'Open Survey 3D',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'iOS',
+				url: 'https://opensurvey3d.com/',
+				offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+				description:
+					'Free, open-source land surveying app that turns an iPhone or iPad into a survey instrument using built-in GPS or an RTK receiver.',
+				isAccessibleForFree: true,
+				sameAs: ['https://opensurvey3d.com/']
+			},
+			{
+				'@type': 'MobileApplication',
+				name: 'OpenShape3D',
+				applicationCategory: 'DesignApplication',
+				operatingSystem: 'iOS',
+				url: 'https://openshape3d.com/',
+				offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+				description:
+					'Free, open-source direct-modeling CAD app for iPad and iPhone — sketch, extrude, and fillet exact 3D solids on the OpenCASCADE kernel.',
+				isAccessibleForFree: true,
+				sameAs: ['https://openshape3d.com/']
+			},
+			{
+				'@type': 'MobileApplication',
+				name: 'OpenWater',
+				applicationCategory: 'HealthApplication',
+				operatingSystem: 'iOS',
+				url: 'https://openwaterapp.com/',
+				offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+				description:
+					'Free, open-source GPS speed and technique tracker for wingfoiling, downwinding, windsurfing, kitesurfing, and sailing. No account, data stays on device.',
+				isAccessibleForFree: true,
+				sameAs: ['https://openwaterapp.com/']
 			},
 			{
 				'@type': 'FAQPage',
@@ -347,6 +387,31 @@
 			<div class="col-btns">
 				<a class="btn btn-navy-lg" href={SPLAT} target="_blank" rel="noopener" onclick={() => trackOutbound('splat_download', SPLAT)}>Get 3D Splat App for Mac</a>
 			</div>
+		</div>
+	</section>
+
+	<!-- Other open apps from theLodgeStudio -->
+	<section id="more-apps" class="section section-alt">
+		<div class="section-head">
+			<div class="eyebrow">From the makers of OpenPlan3D</div>
+			<h2 class="section-h2">More free, open-source apps</h2>
+			<p class="lead">Same idea as OpenPlan3D — capable tools, no subscription, no account, source on GitHub.</p>
+		</div>
+		<div class="apps-grid">
+			{#each OTHER_APPS as app}
+				<a
+					class="app-card"
+					href={app.url}
+					target="_blank"
+					rel="noopener"
+					onclick={() => trackOutbound(`home_${app.slug}`, app.url)}
+				>
+					<div class="app-platform">{app.platform}</div>
+					<h3>{app.name}</h3>
+					<p>{app.blurb}</p>
+					<span class="app-link">Visit {app.name} →</span>
+				</a>
+			{/each}
 		</div>
 	</section>
 
@@ -1091,6 +1156,55 @@
 		display: block;
 	}
 
+	/* ---- More open apps ---- */
+	.apps-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+	.app-card {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding: 26px;
+		border-radius: 16px;
+		border: 0.5px solid var(--border);
+		background: var(--surface);
+		transition:
+			border-color 0.15s ease,
+			transform 0.15s ease;
+	}
+	.app-card:hover {
+		border-color: var(--indigo-light);
+		transform: translateY(-2px);
+	}
+	.app-platform {
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		color: var(--indigo);
+	}
+	.app-card h3 {
+		margin: 0;
+		font-size: 19px;
+		font-weight: 700;
+		color: var(--navy);
+	}
+	.app-card p {
+		margin: 0;
+		font-size: 14.5px;
+		line-height: 1.55;
+		color: var(--text-body);
+	}
+	.app-link {
+		margin-top: auto;
+		padding-top: 10px;
+		font-size: 14.5px;
+		font-weight: 600;
+		color: var(--indigo);
+	}
+
 	/* ---- Use cases ---- */
 	.usecase-grid {
 		display: grid;
@@ -1245,7 +1359,8 @@
 			font-size: 30px;
 		}
 		.feature-grid,
-		.usecase-grid {
+		.usecase-grid,
+		.apps-grid {
 			grid-template-columns: 1fr;
 			margin-top: 36px;
 		}

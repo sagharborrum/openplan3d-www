@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import { trackOutbound } from '$lib/analytics';
+	import { SIBLING_APPS } from '$lib/apps';
 	import { afterNavigate } from '$app/navigation';
 
 	let { children } = $props();
@@ -21,7 +22,6 @@
 
 	const GITHUB = 'https://github.com/theLodgeBots/open3dFloorplan';
 	const EDITOR = 'https://app.openplan3d.com';
-	const SPLAT = 'https://3dsplatapp.com/';
 </script>
 
 <!-- Nav -->
@@ -34,7 +34,27 @@
 	<div class="nav-links">
 		<a href="/features">Features</a>
 		<a href="/capture">iPhone App</a>
-		<a href={SPLAT} target="_blank" rel="noopener" onclick={() => trackOutbound('nav_3dsplatapp', SPLAT)}>3D Splat App</a>
+		<div class="nav-apps">
+			<button class="nav-apps-trigger" aria-haspopup="true">
+				More Apps
+				<svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+					<path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<div class="nav-apps-menu">
+				{#each SIBLING_APPS as app}
+					<a
+						href={app.url}
+						target="_blank"
+						rel="noopener"
+						onclick={() => trackOutbound(`nav_${app.slug}`, app.url)}
+					>
+						<span class="nav-apps-name">{app.name}</span>
+						<span class="nav-apps-tag">{app.tagline}</span>
+					</a>
+				{/each}
+			</div>
+		</div>
 		<a href="/#faq">FAQ</a>
 		<a href={GITHUB} target="_blank" rel="noopener">GitHub</a>
 		<a class="btn-navy" href={EDITOR}>Open Editor</a>
@@ -55,9 +75,22 @@
 	<div class="mobile-menu">
 		<a href="/features" onclick={() => (mobileMenuOpen = false)}>Features</a>
 		<a href="/capture" onclick={() => (mobileMenuOpen = false)}>iPhone App</a>
-		<a href={SPLAT} target="_blank" rel="noopener" onclick={() => { trackOutbound('nav_3dsplatapp', SPLAT); mobileMenuOpen = false; }}>3D Splat App</a>
 		<a href="/#faq" onclick={() => (mobileMenuOpen = false)}>FAQ</a>
 		<a href={GITHUB} target="_blank" rel="noopener" onclick={() => (mobileMenuOpen = false)}>GitHub</a>
+		<div class="mobile-apps-h">More Open Apps</div>
+		{#each SIBLING_APPS as app}
+			<a
+				href={app.url}
+				target="_blank"
+				rel="noopener"
+				onclick={() => {
+					trackOutbound(`nav_${app.slug}`, app.url);
+					mobileMenuOpen = false;
+				}}
+			>
+				{app.name} <span class="mobile-apps-tag">— {app.tagline}</span>
+			</a>
+		{/each}
 		<a class="btn-navy" href={EDITOR}>Open Editor</a>
 	</div>
 {/if}
@@ -91,8 +124,17 @@
 				<a href={`${GITHUB}/blob/main/LICENSE`} target="_blank" rel="noopener">License</a>
 			</div>
 			<div class="footer-col">
-				<div class="footer-h">More Tools</div>
-				<a href={SPLAT} target="_blank" rel="noopener" onclick={() => trackOutbound('footer_3dsplatapp', SPLAT)}>3D Splat App — Gaussian Splatting on Mac</a>
+				<div class="footer-h">More Open Apps</div>
+				{#each SIBLING_APPS as app}
+					<a
+						href={app.url}
+						target="_blank"
+						rel="noopener"
+						onclick={() => trackOutbound(`footer_${app.slug}`, app.url)}
+					>
+						{app.name} — {app.tagline}
+					</a>
+				{/each}
 			</div>
 		</div>
 	</div>
@@ -155,6 +197,72 @@
 	.nav-links a:hover {
 		color: var(--navy);
 	}
+	/* ---- "More Apps" nav dropdown ---- */
+	.nav-apps {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	.nav-apps-trigger {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		background: none;
+		border: none;
+		padding: 0;
+		font: inherit;
+		color: var(--text-body-dark);
+		cursor: pointer;
+	}
+	.nav-apps:hover .nav-apps-trigger,
+	.nav-apps:focus-within .nav-apps-trigger {
+		color: var(--navy);
+	}
+	.nav-apps-menu {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 14px;
+		display: flex;
+		flex-direction: column;
+		min-width: 268px;
+		padding: 8px;
+		border-radius: 14px;
+		background: #fff;
+		border: 0.5px solid var(--border);
+		box-shadow: 0 12px 32px rgba(22, 41, 94, 0.12);
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			opacity 0.15s ease,
+			visibility 0.15s ease;
+	}
+	.nav-apps:hover .nav-apps-menu,
+	.nav-apps:focus-within .nav-apps-menu {
+		opacity: 1;
+		visibility: visible;
+	}
+	.nav-apps-menu a {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding: 9px 12px;
+		border-radius: 9px;
+	}
+	.nav-apps-menu a:hover {
+		background: var(--surface-alt);
+	}
+	.nav-apps-name {
+		font-size: 14.5px;
+		font-weight: 600;
+		color: var(--navy);
+	}
+	.nav-apps-tag {
+		font-size: 12.5px;
+		color: var(--text-muted);
+	}
+
 	.btn-navy {
 		height: 40px;
 		padding: 0 20px;
@@ -268,6 +376,20 @@
 			width: fit-content;
 			margin-top: 6px;
 			padding: 0 22px;
+		}
+		.mobile-apps-h {
+			margin-top: 12px;
+			padding-top: 12px;
+			border-top: 0.5px solid var(--border-soft);
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: var(--navy);
+		}
+		.mobile-apps-tag {
+			color: var(--text-muted);
+			font-size: 14px;
 		}
 		.footer-inner {
 			flex-direction: column;
